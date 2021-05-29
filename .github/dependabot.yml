@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/"
+    target-branch: "main"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+      timezone: "Asia/Almaty"
+    pull-request-branch-name:
+      separator: "-"
+    assignees:
+        - "SkyfaceD"
+    reviewers:
+        - "SkyfaceD"
