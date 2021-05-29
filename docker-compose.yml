@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  todi-database:
+    container_name: todi-database
+    image: postgres:13.2-alpine
+    restart: always
+    environment:
+      - POSTGRES_DB=${DATABASE_NAME}
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - PGPORT=${DATABASE_PORT}
+      - PGTZ=${TIMEZONE}
+    expose:
+      - ${DATABASE_PORT}
+    ports:
+      - ${DATABASE_PORT}:${DATABASE_PORT}
+    volumes:
+      - todi-volume
+    networks:
+      - todi-network
+
+volumes:
+  todi-volume:
+    name: todi-volume
+    driver: local
+
+networks:
+  todi-network:
+    name: todi-network
+    driver: bridge

@@ -1,0 +1,60 @@
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+application {
+    group 'org.skyfaced.todi'
+    version '1.0-alpha'
+
+    mainClass = 'org.skyfaced.todi.Application'
+    mainClassName = 'io.ktor.server.jetty.EngineMain'
+
+    sourceSets {
+        main.kotlin.srcDirs = main.java.srcDirs = ["src"]
+        main.resources.srcDirs = ["resources"]
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        //Kotlin
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+
+        //Ktor
+        implementation "io.ktor:ktor-server-jetty:$ktorVersion"
+        implementation "io.ktor:ktor-server-core:$ktorVersion"
+        implementation "io.ktor:ktor-auth:$ktorVersion"
+        implementation "io.ktor:ktor-gson:$ktorVersion"
+        implementation "ch.qos.logback:logback-classic:$logbackVersion"
+
+        //Koin
+        implementation "io.insert-koin:koin-ktor:$koinVersion"
+        implementation "io.insert-koin:koin-logger-slf4j:$koinVersion"
+
+        //Database
+        implementation "org.postgresql:postgresql:$postgresqlVersion"
+        implementation "com.zaxxer:HikariCP:$hikariVersion"
+
+        //Exposed
+        implementation "org.jetbrains.exposed:exposed-core:$exposedVersion"
+        implementation "org.jetbrains.exposed:exposed-dao:$exposedVersion"
+        implementation "org.jetbrains.exposed:exposed-jdbc:$exposedVersion"
+        implementation "org.jetbrains.exposed:exposed-jodatime:$exposedVersion"
+
+        //Validation
+        implementation "io.konform:konform:$konformVersion"
+    }
+}
