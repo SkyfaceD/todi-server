@@ -22,7 +22,7 @@ buildscript {
 
 application {
     group 'org.skyfaced.todi'
-    version '1.0-alpha'
+    version '1.0.0-alpha'
 
     mainClass = 'org.skyfaced.todi.Application'
     mainClassName = 'io.ktor.server.jetty.EngineMain'
