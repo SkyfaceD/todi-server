@@ -5,7 +5,7 @@ buildscript {
     ext.kotlinVersion='1.5.10'
     ext.ktorVersion='1.6.0'
     ext.logbackVersion='1.2.3'
-    ext.koinVersion='3.0.2'
+    ext.koinVersion='3.1.0'
     ext.hikariVersion='4.0.3'
     ext.exposedVersion='0.32.1'
     ext.postgresqlVersion='42.2.21'
