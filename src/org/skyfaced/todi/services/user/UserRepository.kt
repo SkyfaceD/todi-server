@@ -8,7 +8,7 @@ import org.skyfaced.todi.database.tables.user.UserTable
 import org.skyfaced.todi.models.user.User
 import org.skyfaced.todi.models.user.UserInsert
 import org.skyfaced.todi.utils.crypt
-import java.util.*
+import java.util.UUID
 
 class UserRepository(private val transactionService: TransactionService) {
     suspend fun getUserEntityByUsername(username: String): UserEntity? = transactionService.transaction {

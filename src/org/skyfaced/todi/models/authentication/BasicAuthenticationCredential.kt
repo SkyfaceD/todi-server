@@ -1,6 +1,6 @@
 package org.skyfaced.todi.models.authentication
 
-import io.ktor.auth.*
+import io.ktor.auth.Credential
 
 data class BasicAuthenticationCredential(
     val username: String,

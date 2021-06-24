@@ -2,8 +2,7 @@ package org.skyfaced.todi.utils
 
 import com.typesafe.config.Config
 import com.typesafe.config.ConfigFactory
-import com.zaxxer.hikari.HikariConfig
-import java.util.*
+import java.util.Properties
 
 class ApplicationProperties {
     private val config = ConfigFactory.load("application.conf")

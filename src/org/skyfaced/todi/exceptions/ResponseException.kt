@@ -1,6 +1,6 @@
 package org.skyfaced.todi.exceptions
 
-import io.ktor.http.*
+import io.ktor.http.HttpStatusCode
 
 open class ResponseException(
     override val message: String?,

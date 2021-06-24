@@ -1,15 +1,15 @@
 package org.skyfaced.todi.utils
 
-import io.ktor.application.*
-import io.ktor.auth.*
-import io.ktor.http.*
-import io.ktor.request.*
-import io.ktor.response.*
+import io.ktor.application.ApplicationCall
+import io.ktor.auth.principal
+import io.ktor.http.HttpStatusCode
+import io.ktor.request.receiveOrNull
+import io.ktor.response.respond
 import org.skyfaced.todi.exceptions.ResponseException
 import org.skyfaced.todi.models.ReceiveValidator
 import org.skyfaced.todi.models.authentication.BasicAuthenticationPrincipal
 import org.skyfaced.todi.models.response.Response
-import java.util.*
+import java.util.UUID
 
 suspend fun <T> ApplicationCall.respond(
     statusCode: HttpStatusCode,

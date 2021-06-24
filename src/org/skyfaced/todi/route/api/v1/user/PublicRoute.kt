@@ -1,7 +1,9 @@
 package org.skyfaced.todi.route.api.v1.user
 
-import io.ktor.application.*
-import io.ktor.routing.*
+import io.ktor.application.call
+import io.ktor.routing.Route
+import io.ktor.routing.get
+import io.ktor.routing.post
 import org.koin.ktor.ext.inject
 import org.skyfaced.todi.models.user.UserInsert
 import org.skyfaced.todi.services.public.PublicService
