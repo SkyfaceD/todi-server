@@ -9,7 +9,7 @@ buildscript {
     ext.koinVersion='3.1.1'
     ext.hikariVersion='4.0.3'
     ext.exposedVersion='0.32.1'
-    ext.postgresqlVersion='42.2.21'
+    ext.postgresqlVersion='42.3.0'
     ext.konformVersion='0.3.0'
 
     repositories {
